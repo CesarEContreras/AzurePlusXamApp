@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace AzurePlusXamApp
+namespace AzurePlusXamApp.Views.Login
 {
-    public partial class MainPage : ContentPage
+    public partial class LoginA : ContentPage
     {
-        public MainPage()
+        public LoginA()
         {
             InitializeComponent();
         }

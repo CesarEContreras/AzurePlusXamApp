@@ -12,4 +12,27 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Views\WhereShouldWeDeliver\" />
+    <Folder Include="Views\Login\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Login\LoginA.xaml.cs">
+      <DependentUpon>LoginA.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Login\LoginB.xaml.cs">
+      <DependentUpon>LoginB.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Login\LoginA.xaml.cs">
+      <DependentUpon>LoginA.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Login\LoginB.xaml.cs">
+      <DependentUpon>LoginB.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>

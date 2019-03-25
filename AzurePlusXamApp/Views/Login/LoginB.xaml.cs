@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace AzurePlusXamApp
+namespace AzurePlusXamApp.Views.Login
 {
-    public partial class WhereShouldWeDeliverA : ContentPage
+    public partial class LoginB : ContentPage
     {
-        public WhereShouldWeDeliverA()
+        public LoginB()
         {
             InitializeComponent();
         }
