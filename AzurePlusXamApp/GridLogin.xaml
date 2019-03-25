@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AzurePlusXamApp.GridLogin">
+    <ContentPage.Content>
+        <Grid Padding="10" Margin="10, 40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0" Source="PrincipalIcon"/>
+            <Entry Grid.Row="1" Placeholder="Email" VerticalOptions="Center"/>
+            <Entry Grid.Row="2" Placeholder="Password" IsPassword="true" VerticalOptions="Center"/>
+            <Button Grid.Row="3" Text="Log In" BackgroundColor="Navy" TextColor="White" VerticalOptions="Center"/>
+            
+            <Label Grid.Row="5" Text="Forgot password?" TextColor="Navy" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Row="6" Text="or" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Grid.Row="7" Text="Log In with Facebook" TextColor="Navy" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+        
+            <StackLayout Grid.Row="8" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions ="EndAndExpand">
+                <Label Text="Don't have an account?" TextColor="Gray" />
+                <Label Text="Sign Up" TextColor="Navy"/>
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

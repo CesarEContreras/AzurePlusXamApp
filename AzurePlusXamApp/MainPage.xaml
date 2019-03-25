@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AzurePlusXamApp" x:Class="AzurePlusXamApp.MainPage">
+    <ScrollView>
+    <StackLayout Padding="10" Margin="10,40">
+        <!-- Place new controls here -->
+        <Image Source="PrincipalIcon" WidthRequest="100" HeightRequest="100"/>
+        
+        <Entry Placeholder="Email" VerticalOptions="Center"/>
+        <Entry Placeholder="Password" IsPassword="true" VerticalOptions="Center"/>
+        <Button Text="Log In" BackgroundColor="Navy" TextColor="White" VerticalOptions="Center"/>
+        
+        <Label Text="Forgot password?" TextColor="Navy" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="or" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label Text="Log In with Facebook" TextColor="Navy" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions ="EndAndExpand">
+            <Label Text="Don't have an account?" TextColor="Gray" />
+            <Label Text="Sign Up" TextColor="Navy"/>
+        </StackLayout>
+    </StackLayout>
+        </ScrollView>
+</ContentPage>

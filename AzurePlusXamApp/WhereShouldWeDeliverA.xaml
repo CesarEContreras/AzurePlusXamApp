@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AzurePlusXamApp.WhereShouldWeDeliverA">
+    <ContentPage.Content>
+        
+        <ScrollView>
+            <StackLayout Padding="10" Margin="10,40">
+                <Label Text="Where should we deliver?" FontAttributes="Bold" TextColor="Navy" HorizontalOptions="Center"/>
+                
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="First Name" Style="{StaticResource formLabelStyle}"/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Last Name" Style="{StaticResource formLabelStyle}"/>
+                        <Entry />
+                    </StackLayout>
+                </StackLayout>
+                
+                <StackLayout HorizontalOptions="FillAndExpand">
+                     <Label Text="Address" Style="{StaticResource formLabelStyle}"/>
+                     <Entry/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Apt/Suite/Floor #" Style="{StaticResource formLabelStyle}"/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="Zip" Style="{StaticResource formLabelStyle}"/>
+                        <Entry />
+                    </StackLayout>
+                </StackLayout>
+                
+                 <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="City" Style="{StaticResource formLabelStyle}"/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="State" Style="{StaticResource formLabelStyle}"/>
+                        <Picker/>
+                    </StackLayout>
+                </StackLayout>
+                
+                <StackLayout HorizontalOptions="FillAndExpand">
+                     <Label Text="Phone Number" Style="{StaticResource formLabelStyle}"/>
+                     <Entry/>
+                </StackLayout>
+                
+                <StackLayout HorizontalOptions="FillAndExpand">
+                     <Label Text="Special Instructions (optional)" Style="{StaticResource formLabelStyle}"/>
+                     <Entry Placeholder="e.g. Please leave with front office"/>
+                </StackLayout>
+                
+                <Button Text="Continue" BackgroundColor="Navy" TextColor="White" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
