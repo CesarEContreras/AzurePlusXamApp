@@ -1,5 +1,6 @@
 ﻿using System;
-using AzurePlusXamApp.Views.WhereShouldWeDeliver;
+using AzurePlusXamApp.Views;
+using AzurePlusXamApp.Views.WhichOneFitsYourLifeStyle;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,7 @@ namespace AzurePlusXamApp
         {
             InitializeComponent();
 
-            MainPage = new WhereShouldWeDeliverA();
+            MainPage = new WhichOneFitsYourLifestyleA();
         }
 
         protected override void OnStart()
