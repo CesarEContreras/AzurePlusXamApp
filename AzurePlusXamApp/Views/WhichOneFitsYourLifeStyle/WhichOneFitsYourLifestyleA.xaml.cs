@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AzurePlusXamApp.ViewModels;
 using Xamarin.Forms;
 
-namespace AzurePlusXamApp.Views.WhichOneFitsYourLifeStyle
+namespace AzurePlusXamApp.Views
 {
     public partial class WhichOneFitsYourLifestyleA : ContentPage
     {

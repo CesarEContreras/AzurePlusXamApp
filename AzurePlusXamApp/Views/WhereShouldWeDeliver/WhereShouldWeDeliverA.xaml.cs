@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace AzurePlusXamApp.Views.WhereShouldWeDeliver
+namespace AzurePlusXamApp.Views
 {
     public partial class WhereShouldWeDeliverA : ContentPage
     {

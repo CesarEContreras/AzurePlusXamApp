@@ -6,7 +6,7 @@ using AzurePlusXamApp.Models;
 
 namespace AzurePlusXamApp.ViewModels
 {
-    public class WhichOneFitsYourLSViewModel : INotifyPropertyChanged
+    public class WhichOneFitsYourLSViewModel : BaseViewModel
     {
         public ObservableCollection<LifestylePlan> LifestylePlanList { get; set; }
 
@@ -29,13 +29,6 @@ namespace AzurePlusXamApp.ViewModels
                     Price = 7.49f
                 }
             };
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

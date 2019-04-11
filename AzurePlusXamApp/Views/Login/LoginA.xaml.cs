@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace AzurePlusXamApp.Views.Login
+namespace AzurePlusXamApp.Views
 {
     public partial class LoginA : ContentPage
     {

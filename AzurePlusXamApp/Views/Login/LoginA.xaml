@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:AzurePlusXamApp.Views.Login" 
-             x:Class="AzurePlusXamApp.Views.Login.LoginA">
+             xmlns:local="clr-namespace:AzurePlusXamApp.Views" 
+             x:Class="AzurePlusXamApp.Views.LoginA">
     <ScrollView>
     <StackLayout Padding="10" Margin="10,40">
         <!-- Place new controls here -->

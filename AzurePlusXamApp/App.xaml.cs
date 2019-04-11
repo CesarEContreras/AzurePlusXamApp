@@ -1,6 +1,7 @@
 ﻿using System;
 using AzurePlusXamApp.Views;
-using AzurePlusXamApp.Views.WhichOneFitsYourLifeStyle;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Push;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,12 +14,13 @@ namespace AzurePlusXamApp
         {
             InitializeComponent();
 
-            MainPage = new WhichOneFitsYourLifestyleA();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
+            AppCenter.Start("50ffe9df-b14c-4083-a969-c321fd85d9cc", typeof(Push));
         }
 
         protected override void OnSleep()

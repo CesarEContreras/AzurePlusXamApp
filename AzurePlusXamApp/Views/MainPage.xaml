@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                x:Class="AzurePlusXamApp.Views.MainPage"
+                xmlns:local="clr-namespace:AzurePlusXamApp.Views">
+    
+    <MasterDetailPage.Master>
+          <ContentPage Title="Menu" BackgroundColor="Black" Icon="menuButton">
+         
+            <StackLayout Orientation="Vertical" Margin="0,40,0,0">
+
+                 <Image Source="https://laurauinteriordesign.com/wp-content/uploads/2018/03/avatar-placeholder.png"
+                        WidthRequest="300" HeightRequest="100"
+                        HorizontalOptions="CenterAndExpand"/>
+                                        
+                 <Label Text="Cesar Contreras" TextColor="White"/>
+                 <StackLayout Orientation="Horizontal">
+                         <Label Text="Last Login  " TextColor="#52BEFF"/>
+                         <Label Text="Jun 31, 2019"  TextColor="White"/>  
+                 </StackLayout>  
+
+                 <ListView BackgroundColor="Transparent" ItemsSource="{Binding MenuItems}" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Title}" TextColor="White"/>   
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                 </ListView>
+            </StackLayout>
+       
+          </ContentPage>
+        </MasterDetailPage.Master>
+
+       <MasterDetailPage.Detail>
+                <ContentPage>
+                <StackLayout Margin="0,40,0,0" VerticalOptions="Center">
+                    <Label Text="Welcome to my 'Azure + Xamarin' project app" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                <Image Source="https://megsoftconsulting.com/wp-content/uploads/2015/11/Megsoft-logo-sizenew-azul.png"
+                       WidthRequest="300" HeightRequest="100"
+                       HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Facilitadores" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,20,0,20">
+                    <StackLayout>
+                        <Image 
+                        Source="https://laurauinteriordesign.com/wp-content/uploads/2018/03/avatar-placeholder.png"
+                        WidthRequest="100"
+                        HeightRequest="100"/>
+                        <Label Text="Enmanuel Toribio" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <BoxView BackgroundColor="Black" WidthRequest="1" HorizontalOptions="FillAndExpand"/>
+                    <StackLayout>
+                        <Image 
+                        Source="https://laurauinteriordesign.com/wp-content/uploads/2018/03/avatar-placeholder.png"
+                        WidthRequest="100"
+                        HeightRequest="100"/>
+                        <Label Text="Leomaris Reyes" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+                
+            </StackLayout>
+                </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
