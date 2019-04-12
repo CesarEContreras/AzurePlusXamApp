@@ -18,12 +18,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
-    <Folder Include="Views\WhereShouldWeDeliver\" />
     <Folder Include="Views\Login\" />
-    <Folder Include="Views\WhichOneFitsYourLifeStyle\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Models\" />
     <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Login\LoginA.xaml.cs">
@@ -41,6 +40,9 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Login\LoginB.xaml.cs">
       <DependentUpon>LoginB.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

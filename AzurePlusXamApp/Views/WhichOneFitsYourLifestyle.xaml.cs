@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace AzurePlusXamApp.Views
 {
-    public partial class WhichOneFitsYourLifestyleA : ContentPage
+    public partial class WhichOneFitsYourLifestyle : ContentPage
     {
-        public WhichOneFitsYourLifestyleA()
+        public WhichOneFitsYourLifestyle()
         {
             InitializeComponent();
         }

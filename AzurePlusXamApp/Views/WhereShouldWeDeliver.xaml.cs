@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace AzurePlusXamApp.Views
 {
-    public partial class WhereShouldWeDeliverA : ContentPage
+    public partial class WhereShouldWeDeliver : ContentPage
     {
-        public WhereShouldWeDeliverA()
+        public WhereShouldWeDeliver()
         {
             InitializeComponent();
         }

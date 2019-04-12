@@ -1,4 +1,5 @@
 ﻿using System;
+using AzurePlusXamApp.Helpers;
 using AzurePlusXamApp.ViewModels;
 using AzurePlusXamApp.Views;
 using Microsoft.AppCenter;
@@ -21,13 +22,15 @@ namespace AzurePlusXamApp
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync("NavigationPage/LoginA");
+            await NavigationService.NavigateAsync(NavigationConstants.WelcomePage);
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<WelcomePage, WelcomePageViewModel>();
             containerRegistry.RegisterForNavigation<LoginA, LoginViewModel>();
+            containerRegistry.RegisterForNavigation<WhichOneFitsYourLifestyle, WhichOneFitsYourLSViewModel>();
         }
     }
 }

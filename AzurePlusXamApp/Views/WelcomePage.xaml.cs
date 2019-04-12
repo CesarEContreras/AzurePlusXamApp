@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AzurePlusXamApp.ViewModels;
+
 using Xamarin.Forms;
 
 namespace AzurePlusXamApp.Views
 {
-    public partial class LoginA : ContentPage
+    public partial class WelcomePage : ContentPage
     {
-        public LoginA()
+        public WelcomePage()
         {
             InitializeComponent();
         }

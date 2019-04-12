@@ -26,13 +26,13 @@ namespace AzurePlusXamApp.Views
                     }
                 case "Where Should We Deliver? - Stack":
                     {
-                        Detail = new NavigationPage(new WhereShouldWeDeliverA());
+                        Detail = new NavigationPage(new WhereShouldWeDeliver());
                         IsPresented = false;
                         break;
                     }
                 case "Which One Fits Your Life Style? - Stack":
                     {
-                        Detail = new NavigationPage(new WhichOneFitsYourLifestyleA());
+                        Detail = new NavigationPage(new WhichOneFitsYourLifestyle());
                         IsPresented = false;
                         break;
                     }

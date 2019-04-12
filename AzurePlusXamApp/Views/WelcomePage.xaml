@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AzurePlusXamApp.Views.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" Margin="0,40,0,20" VerticalOptions="Center">
+            <Label Text="Welcome to my 'Azure + Xamarin' project app" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="https://megsoftconsulting.com/wp-content/uploads/2015/11/Megsoft-logo-sizenew-azul.png"
+                   WidthRequest="300" 
+                   HeightRequest="100"
+                   HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Facilitadores" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,20,0,20">
+                <StackLayout>
+                    <Image Source="https://laurauinteriordesign.com/wp-content/uploads/2018/03/avatar-placeholder.png"
+                           WidthRequest="100"
+                           HeightRequest="100"/>
+                    <Label Text="Enmanuel Toribio" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <BoxView BackgroundColor="Black" WidthRequest="1" HorizontalOptions="FillAndExpand"/>
+                <StackLayout>
+                    <Image Source="https://laurauinteriordesign.com/wp-content/uploads/2018/03/avatar-placeholder.png"
+                           WidthRequest="100"
+                           HeightRequest="100"/>
+                    <Label Text="Leomaris Reyes" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="Let's see!" 
+                    Command="{Binding NavigateCommand}" 
+                    BackgroundColor="Navy" 
+                    TextColor="White" 
+                    VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
