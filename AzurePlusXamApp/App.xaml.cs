@@ -14,7 +14,7 @@ namespace AzurePlusXamApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginA());
         }
 
         protected override void OnStart()

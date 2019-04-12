@@ -19,7 +19,8 @@
                          <Label Text="Jun 31, 2019"  TextColor="White"/>  
                  </StackLayout>  
 
-                 <ListView BackgroundColor="Transparent" ItemsSource="{Binding MenuItems}" SeparatorVisibility="None">
+                 <ListView BackgroundColor="Transparent" ItemsSource="{Binding MenuItems}" SeparatorVisibility="None"
+                           x:Name="MenuListView" ItemTapped="Item_Clicked">
                     <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextCell Text="{Binding Title}" TextColor="White"/>   

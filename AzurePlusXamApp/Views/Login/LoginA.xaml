@@ -8,14 +8,15 @@
         <!-- Place new controls here -->
         <Image Source="PrincipalIcon" WidthRequest="100" HeightRequest="100"/>
         
-        <Entry Placeholder="Email" VerticalOptions="Center"/>
-        <Entry Placeholder="Password" IsPassword="true" VerticalOptions="Center"/>
-        <Button Text="Log In" BackgroundColor="Navy" TextColor="White" VerticalOptions="Center"/>
+        <Entry Text="{Binding Username}" Placeholder="Email" VerticalOptions="Center"/>
+        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="true" VerticalOptions="Center"/>
+        <Button Text="Log In" Command="{Binding AuthenticateUserCommand}" BackgroundColor="Navy" TextColor="White" VerticalOptions="Center"/>
         
         <Label Text="Forgot password?" TextColor="Navy" HorizontalOptions="Center" VerticalOptions="Center"/>
         <Label Text="or" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"/>
         <Label Text="Log In with Facebook" TextColor="Navy" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
-        
+        <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+            
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions ="EndAndExpand">
             <Label Text="Don't have an account?" TextColor="Gray" />
             <Label Text="Sign Up" TextColor="Navy"/>

@@ -13,19 +13,25 @@ namespace AzurePlusXamApp.Views
             BindingContext = new MainPageViewModel();
         }
 
-        void OnTapGestureRecognizerTapped(object sender, TappedEventArgs args)
+        void Item_Clicked(object sender, System.EventArgs e)
         {
-            var _case = args.Parameter as string;
+            var _case = MenuListView.SelectedItem as Models.MenuItem; 
 
-            switch(_case)
+            switch(_case.Title)
             {
-                case "Page1":
+                case "Login B":
                     {
-                        Detail = new NavigationPage(new WhereShouldWeDeliverA());
+                        Detail = new NavigationPage(new LoginB());
                         IsPresented = false;
                         break; 
                     }
-                case "Page2":
+                case "Where Should We Deliver? - Stack":
+                    {
+                        Detail = new NavigationPage(new WhereShouldWeDeliverA());
+                        IsPresented = false;
+                        break;
+                    }
+                case "Which One Fits Your Life Style? - Stack":
                     {
                         Detail = new NavigationPage(new WhichOneFitsYourLifestyleA());
                         IsPresented = false;

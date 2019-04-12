@@ -24,7 +24,7 @@ namespace AzurePlusXamApp.ViewModels
 
         void NavigateToPage(Models.MenuItem page)
         {
-             
+            throw new NotImplementedException();
         }
     }
 }
