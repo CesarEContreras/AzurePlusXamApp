@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace AzurePlusXamApp.ViewModels
@@ -8,7 +9,7 @@ namespace AzurePlusXamApp.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         bool isBusy = false;
-        public INavigation Navigation { get; set; }
+        protected INavigationService NavigationService { get; private set; }
 
         public bool IsBusy
         {
@@ -18,6 +19,11 @@ namespace AzurePlusXamApp.ViewModels
                 isBusy = value;
                 OnPropertyChanged();
             }
+        }
+
+        public BaseViewModel(INavigationService navigationService)
+        {
+            NavigationService = navigationService;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

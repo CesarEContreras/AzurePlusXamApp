@@ -14,6 +14,7 @@
     <PackageReference Include="RestSharp" Version="106.6.9" />
     <PackageReference Include="Microsoft.AppCenter" Version="1.14.0" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="1.14.0" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="7.1.0.431" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

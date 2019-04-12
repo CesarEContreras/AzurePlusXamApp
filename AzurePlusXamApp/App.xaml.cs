@@ -1,36 +1,33 @@
 ﻿using System;
+using AzurePlusXamApp.ViewModels;
 using AzurePlusXamApp.Views;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Push;
+using Prism;
+using Prism.DryIoc;
+using Prism.Ioc;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace AzurePlusXamApp
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
-        public App()
+        public App() : this(null) { }
+
+        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+
+        protected override async void OnInitialized()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new LoginA());
+            await NavigationService.NavigateAsync("NavigationPage/LoginA");
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Handle when your app starts
-            AppCenter.Start("50ffe9df-b14c-4083-a969-c321fd85d9cc", typeof(Push));
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<LoginA, LoginViewModel>();
         }
     }
 }

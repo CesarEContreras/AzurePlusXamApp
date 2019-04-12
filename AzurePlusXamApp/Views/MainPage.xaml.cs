@@ -10,7 +10,6 @@ namespace AzurePlusXamApp.Views
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MainPageViewModel();
         }
 
         void Item_Clicked(object sender, System.EventArgs e)

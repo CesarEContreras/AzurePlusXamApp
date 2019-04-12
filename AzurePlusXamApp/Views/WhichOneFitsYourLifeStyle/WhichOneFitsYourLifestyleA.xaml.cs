@@ -10,7 +10,6 @@ namespace AzurePlusXamApp.Views
         public WhichOneFitsYourLifestyleA()
         {
             InitializeComponent();
-            BindingContext = new WhichOneFitsYourLSViewModel();
         }
     }
 }

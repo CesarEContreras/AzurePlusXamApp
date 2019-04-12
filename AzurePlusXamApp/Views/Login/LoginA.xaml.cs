@@ -13,7 +13,6 @@ namespace AzurePlusXamApp.Views
         public LoginA()
         {
             InitializeComponent();
-            BindingContext = new LoginViewModel();
             NavigationPage.SetHasNavigationBar(this, false);
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using AzurePlusXamApp.Models;
+using Prism.Navigation;
 
 namespace AzurePlusXamApp.ViewModels
 {
@@ -10,7 +11,7 @@ namespace AzurePlusXamApp.ViewModels
     {
         public ObservableCollection<LifestylePlan> LifestylePlanList { get; set; }
 
-        public WhichOneFitsYourLSViewModel()
+        public WhichOneFitsYourLSViewModel(INavigationService navigationService): base(navigationService)
         {
             LifestylePlanList = new ObservableCollection<LifestylePlan>
             {

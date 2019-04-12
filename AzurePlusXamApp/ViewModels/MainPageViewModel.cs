@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace AzurePlusXamApp.ViewModels
@@ -11,7 +12,7 @@ namespace AzurePlusXamApp.ViewModels
         public ObservableCollection<Models.MenuItem> MenuItems { get; set; }
         public ICommand TapCommand { get; set; }
 
-        public MainPageViewModel()
+        public MainPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             MenuItems = new ObservableCollection<Models.MenuItem>()
             {

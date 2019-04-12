@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AzurePlusXamApp.Views;
+using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace AzurePlusXamApp.ViewModels
@@ -13,7 +14,7 @@ namespace AzurePlusXamApp.ViewModels
         public Command ForgotPasswordCommand { get; }
         public Command SignUpCommand { get; }
 
-        public LoginViewModel()
+        public LoginViewModel(INavigationService navigationService) : base(navigationService)
         {
             AuthenticateUserCommand = new Command(async () => await Authenticate(), () => !IsBusy);
         }
