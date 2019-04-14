@@ -31,6 +31,7 @@ namespace AzurePlusXamApp
             containerRegistry.RegisterForNavigation<WelcomePage, WelcomePageViewModel>();
             containerRegistry.RegisterForNavigation<LoginA, LoginViewModel>();
             containerRegistry.RegisterForNavigation<WhichOneFitsYourLifestyle, WhichOneFitsYourLSViewModel>();
+            containerRegistry.RegisterForNavigation<MainTabPage>();
         }
     }
 }

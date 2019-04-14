@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using AzurePlusXamApp.Helpers;
 using AzurePlusXamApp.Views;
+using Prism.Commands;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -10,15 +12,12 @@ namespace AzurePlusXamApp.ViewModels
     {
         string username;
         string password;
-        public Command AuthenticateUserCommand { get; }
-        public Command ForgotPasswordCommand { get; }
-        public Command SignUpCommand { get; }
+        private DelegateCommand authenticateUserCommand;
+        public DelegateCommand ForgotPasswordCommand { get; }
+        public DelegateCommand SignUpCommand { get; }
 
-        public LoginViewModel(INavigationService navigationService) : base(navigationService)
-        {
-            AuthenticateUserCommand = new Command(async () => await Authenticate(), () => !IsBusy);
-        }
-
+        public DelegateCommand AuthenticateUserCommand =>
+            authenticateUserCommand ?? (authenticateUserCommand = new DelegateCommand(Authenticate));
         public string Username
         {
             get => username;
@@ -39,15 +38,19 @@ namespace AzurePlusXamApp.ViewModels
             }
         }
 
-        async Task Authenticate()
+        public LoginViewModel(INavigationService navigationService) : base(navigationService)
+        {
+        }
+
+        async void Authenticate()
         {
             IsBusy = true;
             await Task.Delay(4000);
 
             IsBusy = false;
-            AuthenticateUserCommand.ChangeCanExecute();
-            //await Navigation.PopAsync();
-            //await Navigation.PushAsync(new MainTabPage());
+            ExecuteNavigation();
         }
+
+        private async void ExecuteNavigation() => await NavigationService.NavigateAsync(NavigationConstants.MainTabPage);
     }
 }

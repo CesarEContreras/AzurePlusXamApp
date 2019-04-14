@@ -16,9 +16,6 @@ namespace AzurePlusXamApp.ViewModels
         {
         }
 
-        async void ExecuteNavigateCommand()
-        {
-            await NavigationService.NavigateAsync(NavigationConstants.LoginA);
-        }
+        private async void ExecuteNavigateCommand() => await NavigationService.NavigateAsync(NavigationConstants.LoginA);
     }
 }
